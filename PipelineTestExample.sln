@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineTestExample", "PipelineTestExample\PipelineTestExample.csproj", "{2937A8D5-8A67-4E1A-AC08-1B89EAAD3D43}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6B8172E1-ED00-4EB0-AE3B-AEEE75CD1FDB} = {6B8172E1-ED00-4EB0-AE3B-AEEE75CD1FDB}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentPipelineTest", "..\ContentPipelineTest\ContentPipelineTest\ContentPipelineTest.csproj", "{6B8172E1-ED00-4EB0-AE3B-AEEE75CD1FDB}"
 EndProject

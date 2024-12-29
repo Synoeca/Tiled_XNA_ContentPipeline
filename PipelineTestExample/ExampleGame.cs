@@ -9,6 +9,7 @@ namespace PipelineTestExample
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private Tilemap _tilemap;
+        private BasicTilemap _basicTilemap;
 
         public ExampleGame()
         {
@@ -29,7 +30,8 @@ namespace PipelineTestExample
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            _tilemap.LoadContent(Content);
+            //_tilemap.LoadContent(Content);
+            _basicTilemap = Content.Load<BasicTilemap>("example");
         }
 
         protected override void Update(GameTime gameTime)
@@ -48,7 +50,8 @@ namespace PipelineTestExample
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin(transformMatrix: Matrix.CreateTranslation(23, 23, 0));
-            _tilemap.Draw(gameTime, _spriteBatch);
+            //_tilemap.Draw(gameTime, _spriteBatch);
+            _basicTilemap.Draw(gameTime, _spriteBatch);
             _spriteBatch.End();
             base.Draw(gameTime);
         }

@@ -10,6 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
+/reference:..\..\..\ContentPipelineTest\ContentPipelineTest\bin\Debug\net8.0\ContentPipelineTest.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -24,6 +25,11 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:10.2.2.png
+
+#begin example.tmap
+/importer:BasicTilemapImporter
+/processor:BasicTilemapProcessor
+/build:example.tmap
 
 #begin tileset.png
 /importer:TextureImporter
