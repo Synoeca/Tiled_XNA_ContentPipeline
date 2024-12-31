@@ -39,14 +39,14 @@ namespace PipelineTestExample
         {
             // Read in the map file
             string data = File.ReadAllText(Path.Join(content.RootDirectory, _mapFilename));
-            var lines = data.Split('\n');
+            string[] lines = data.Split('\n');
 
             // First line is tileset image file name 
-            var tilesetFileName = lines[0].Trim();
+            string tilesetFileName = lines[0].Trim();
             _tilesetTexture = content.Load<Texture2D>(tilesetFileName);
 
             // Second line is tile size
-            var secondLine = lines[1].Split(',');
+            string[] secondLine = lines[1].Split(',');
             _tileWidth = int.Parse(secondLine[0]);
             _tileHeight = int.Parse(secondLine[1]);
 
@@ -69,13 +69,13 @@ namespace PipelineTestExample
             }
 
             // Third line is map size (in tiles)
-            var thirdLine = lines[2].Split(',');
+            string[] thirdLine = lines[2].Split(',');
             _mapWidth = int.Parse(thirdLine[0]);
             _mapHeight = int.Parse(thirdLine[1]);
 
             // Fourth line is map data
             _map = new int[_mapWidth * _mapHeight];
-            var fourthLine = lines[3].Split(',');
+            string[] fourthLine = lines[3].Split(',');
             for (int i = 0; i < _mapWidth * _mapHeight; i++)
             {
                 _map[i] = int.Parse(fourthLine[i]);
