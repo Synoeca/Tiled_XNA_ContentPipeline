@@ -10,6 +10,8 @@ namespace PipelineTestExample
         private SpriteBatch _spriteBatch;
         private Tilemap _tilemap;
         private BasicTilemap _basicTilemap;
+        private BasicTiledMap _basicTiledMap;
+        private BasicTiledTileset _basicTiledTileset;
 
         public ExampleGame()
         {
@@ -32,6 +34,8 @@ namespace PipelineTestExample
             // TODO: use this.Content to load your game content here
             //_tilemap.LoadContent(Content);
             _basicTilemap = Content.Load<BasicTilemap>("example");
+            //_basicTiledMap = Content.Load<BasicTiledMap>("TestMapRev4");
+            _basicTiledTileset = Content.Load<BasicTiledTileset>("TestMapRev4");
         }
 
         protected override void Update(GameTime gameTime)
