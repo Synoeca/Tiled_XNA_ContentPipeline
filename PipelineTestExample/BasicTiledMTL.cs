@@ -127,7 +127,7 @@ namespace PipelineTestExample
             public static byte VerticalFlipDrawFlag { get; set; }
             public static byte DiagonallyFlipDrawFlag { get; set; }
 
-            public SortedList<string, string> Properties { get; set; }
+            public Dictionary<string, string> Properties { get; set; }
 
             public struct TileInfo
             {
