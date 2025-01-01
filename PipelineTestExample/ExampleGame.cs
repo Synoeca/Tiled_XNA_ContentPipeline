@@ -14,6 +14,7 @@ namespace PipelineTestExample
         private BasicTiledTileset _basicTiledTileset;
         private BasicTiledMapTileset _basicTiledMapTileset;
         private BasicTiledLayer _basicTiledLayer;
+        private BasicTiledMTL _basicTiledMtl;
 
         public ExampleGame()
         {
@@ -38,8 +39,9 @@ namespace PipelineTestExample
             _basicTilemap = Content.Load<BasicTilemap>("example");
             //_basicTiledMap = Content.Load<BasicTiledMap>("TestMapRev4");
             //_basicTiledTileset = Content.Load<BasicTiledTileset>("TestMapRev4");
-            //_basicTiledMapTileset = Content.Load<BasicTiledMapTileset>("TestMapRev4");
-            _basicTiledLayer = Content.Load<BasicTiledLayer>("TestMapRev4");
+            _basicTiledMapTileset = Content.Load<BasicTiledMapTileset>("TestMapRev4");
+            //_basicTiledLayer = Content.Load<BasicTiledLayer>("TestMapRev4");
+            //_basicTiledMtl = Content.Load<BasicTiledMTL>("TestMapRev4");
         }
 
         protected override void Update(GameTime gameTime)

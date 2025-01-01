@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 
 namespace PipelineTestExample
 {
@@ -112,9 +113,7 @@ namespace PipelineTestExample
             }
         }
 
-        /// <summary>
-        /// The Map's Tilesets
-        /// </summary>
-        public Dictionary<string, BasicTiledTileset> Tilesets { get; set; }
+        public class TilesetDictionary : Dictionary<string, BasicTiledTileset>;
+        public TilesetDictionary Tilesets { get; set; }
     }
 }

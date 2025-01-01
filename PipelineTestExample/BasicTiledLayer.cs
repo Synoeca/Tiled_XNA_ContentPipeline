@@ -15,17 +15,6 @@ namespace PipelineTestExample
 {
     public class BasicTiledLayer
     {
-        /*
-         * High-order bits in the tile data indicate tile flipping
-         */
-        //private const uint FlippedHorizontallyFlag = 0x80000000;
-        //private const uint FlippedVerticallyFlag = 0x40000000;
-        //private const uint FlippedDiagonallyFlag = 0x20000000;
-
-        //internal const byte HorizontalFlipDrawFlag = 1;
-        //internal const byte VerticalFlipDrawFlag = 2;
-        //internal const byte DiagonallyFlipDrawFlag = 4;
-
         public static uint FlippedHorizontallyFlag { get; set; }
         public static uint FlippedVerticallyFlag { get; set; }
         public static uint FlippedDiagonallyFlag { get; set; }
