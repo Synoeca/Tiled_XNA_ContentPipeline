@@ -32,8 +32,8 @@
 /build:example.tmap
 
 #begin TestMapRev4.tmx
-/importer:BasicTiledMapTilesetImporter
-/processor:BasicTiledMapTilesetProcessor
+/importer:BasicTiledLayerImporter
+/processor:BasicTiledLayerProcessor
 /build:TestMapRev4.tmx
 
 #begin tileset.png
