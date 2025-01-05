@@ -10,6 +10,14 @@ namespace PipelineTestExample
         private SpriteBatch _spriteBatch;
         private Tilemap _tilemap;
         private BasicTilemap _basicTilemap;
+        private BasicTiledMap _basicTiledMap;
+        private BasicTiledTileset _basicTiledTileset;
+        private BasicTiledMapTileset _basicTiledMapTileset;
+        private BasicTiledLayer _basicTiledLayer;
+        private BasicTiledMTL _basicTiledMtl;
+        private BasicTiledObjectGroupObject _basicTiledObjectGroupObject;
+        private BasicTiledGroup _basicTiledGroup;
+        private BasicTiledMTLG _basicTiledMtlg;
 
         public ExampleGame()
         {
@@ -32,6 +40,14 @@ namespace PipelineTestExample
             // TODO: use this.Content to load your game content here
             //_tilemap.LoadContent(Content);
             _basicTilemap = Content.Load<BasicTilemap>("example");
+            //_basicTiledMap = Content.Load<BasicTiledMap>("TestMapRev4");
+            //_basicTiledTileset = Content.Load<BasicTiledTileset>("TestMapRev4");
+            //_basicTiledMapTileset = Content.Load<BasicTiledMapTileset>("TestMapRev4");
+            //_basicTiledLayer = Content.Load<BasicTiledLayer>("TestMapRev4");
+            //_basicTiledMtl = Content.Load<BasicTiledMTL>("TestMapRev4");
+            //_basicTiledObjectGroupObject = Content.Load<BasicTiledObjectGroupObject>("TestMapRev4");
+            //_basicTiledGroup = Content.Load<BasicTiledGroup>("TestMapRev4");
+            _basicTiledMtlg = Content.Load<BasicTiledMTLG>("TestMapRev4");
         }
 
         protected override void Update(GameTime gameTime)
