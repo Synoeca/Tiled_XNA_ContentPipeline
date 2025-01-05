@@ -17,6 +17,7 @@ namespace PipelineTestExample
         private BasicTiledMTL _basicTiledMtl;
         private BasicTiledObjectGroupObject _basicTiledObjectGroupObject;
         private BasicTiledGroup _basicTiledGroup;
+        private BasicTiledMTLG _basicTiledMtlg;
 
         public ExampleGame()
         {
@@ -45,9 +46,8 @@ namespace PipelineTestExample
             //_basicTiledLayer = Content.Load<BasicTiledLayer>("TestMapRev4");
             //_basicTiledMtl = Content.Load<BasicTiledMTL>("TestMapRev4");
             //_basicTiledObjectGroupObject = Content.Load<BasicTiledObjectGroupObject>("TestMapRev4");
-            _basicTiledGroup = Content.Load<BasicTiledGroup>("TestMapRev4");
-
-
+            //_basicTiledGroup = Content.Load<BasicTiledGroup>("TestMapRev4");
+            _basicTiledMtlg = Content.Load<BasicTiledMTLG>("TestMapRev4");
         }
 
         protected override void Update(GameTime gameTime)
