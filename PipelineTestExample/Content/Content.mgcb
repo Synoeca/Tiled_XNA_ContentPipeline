@@ -10,7 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:..\..\..\ContentPipelineTest\ContentPipelineTest\bin\Debug\net8.0\ContentPipelineTest.dll
+/reference:..\..\ContentPipelineTest\ContentPipelineTest\bin\Debug\net8.0\ContentPipelineTest.dll
 
 #---------------------------------- Content ---------------------------------#
 
