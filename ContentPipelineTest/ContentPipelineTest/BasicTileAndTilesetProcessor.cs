@@ -33,8 +33,8 @@ namespace ContentPipelineTest
 
                     if (content.Texture?.Mipmaps.Count > 0)
                     {
-                        content.TexWidth = content.Texture.Mipmaps[0].Width;
-                        content.TexHeight = content.Texture.Mipmaps[0].Height;
+                        //content.TexWidth = content.Texture.Mipmaps[0].Width;
+                        //content.TexHeight = content.Texture.Mipmaps[0].Height;
                         context.Logger.LogMessage($"Texture processed successfully:");
                         context.Logger.LogMessage($" Width: {content.TexWidth}");
                         context.Logger.LogMessage($" Height: {content.TexHeight}");
@@ -55,9 +55,9 @@ namespace ContentPipelineTest
             if (content.Tiles != null && content.Tiles.Count > 0)
             {
                 context.Logger.LogMessage("\nProcessing Tiles:");
-                foreach (var tileKvp in content.Tiles)
+                foreach (KeyValuePair<int, BasicTileContent> tileKvp in content.Tiles)
                 {
-                    var tile = tileKvp.Value;
+                    BasicTileContent tile = tileKvp.Value;
                     context.Logger.LogMessage($"\nTile ID: {tile.Id}");
                     context.Logger.LogMessage($" Type: {tile.Type ?? "none"}");
                     context.Logger.LogMessage($" Probability: {tile.Probability}");
@@ -65,7 +65,7 @@ namespace ContentPipelineTest
                     if (tile.Properties.Count > 0)
                     {
                         context.Logger.LogMessage(" Properties:");
-                        foreach (var prop in tile.Properties)
+                        foreach (KeyValuePair<string, string> prop in tile.Properties)
                         {
                             context.Logger.LogMessage($"  {prop.Key}: {prop.Value}");
                         }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using static System.Net.WebRequestMethods;
 using File = System.IO.File;
 
@@ -170,8 +171,17 @@ namespace ContentPipelineTest
                         {
                             case "image":
                                 string source = reader.GetAttribute("source");
+                                string width = reader.GetAttribute("width");
+                                string height = reader.GetAttribute("height");
                                 result.Image = source;
-                                context.Logger.LogMessage($"Found image: {source}");
+                                result.TexWidth = Convert.ToInt32(width);
+                                result.TexHeight = Convert.ToInt32(height);
+                                
+
+                                context.Logger.LogMessage("Found image element:");
+                                context.Logger.LogMessage($"  Source: {source}");
+                                context.Logger.LogMessage($"  Width: {width}");
+                                context.Logger.LogMessage($"  Height: {height}");
                                 break;
 
                             case "tile":
@@ -196,15 +206,11 @@ namespace ContentPipelineTest
                                 string probability = reader.GetAttribute("probability");
                                 if (!string.IsNullOrEmpty(probability) && float.TryParse(probability, out float prob))
                                 {
-                                    context.Logger.LogMessage($"\nprob: {prob}:");
-                                    if (prob == null)
-                                    {
-                                        tile.Probability = 1.000f;
-                                    }
-                                    else
-                                    {
-                                        tile.Probability = prob;
-                                    }
+                                    tile.Probability = prob;
+                                }
+                                else
+                                {
+                                    tile.Probability = 1.000f;
                                 }
 
                                 context.Logger.LogMessage($"\nProcessing tile {tileId}:");

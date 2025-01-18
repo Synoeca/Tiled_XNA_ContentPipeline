@@ -32,14 +32,15 @@
 /build:example.tmap
 
 #begin TestMapRev4.tmx
-/importer:BasicTiledMTLGImporter
-/processor:BasicTiledMTLGProcessor
-/build:TestMapRev4.tmx
+/copy:TestMapRev4.tmx
 
 #begin TestMapRev5.tmx
+/copy:TestMapRev5.tmx
+
+#begin TestMapRev6.tmx
 /importer:BasicTileAndTilesetImporter
 /processor:BasicTileAndTilesetProcessor
-/build:TestMapRev5.tmx
+/build:TestMapRev6.tmx
 
 #begin tileset.png
 /importer:TextureImporter

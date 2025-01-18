@@ -24,7 +24,7 @@ namespace PipelineTestExample
         /// The probability of this tile being chosen when placing random tiles (optional)
         /// Default is 1.0 if not specified
         /// </summary>
-        public float Probability { get; set; } = 1.0f;
+        public float Probability { get; set; }
 
         /// <summary>
         /// Custom properties for the tile
@@ -181,17 +181,17 @@ namespace PipelineTestExample
         /// <summary>
         /// The texture containing all tiles
         /// </summary>
-        public Texture2D Texture { get; set; }
+        protected Texture2D Texture { get; set; }
 
         /// <summary>
         /// The width of the tileset texture
         /// </summary>
-        public int TexWidth { get; set; }
+        protected int TexWidth { get; set; }
 
         /// <summary>
         /// The height of the tileset texture
         /// </summary>
-        public int TexHeight { get; set; }
+        protected int TexHeight { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the Tileset class
