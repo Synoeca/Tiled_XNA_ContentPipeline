@@ -36,6 +36,11 @@
 /processor:BasicTiledMTLGProcessor
 /build:TestMapRev4.tmx
 
+#begin TestMapRev5.tmx
+/importer:BasicTileAndTilesetImporter
+/processor:BasicTileAndTilesetProcessor
+/build:TestMapRev5.tmx
+
 #begin tileset.png
 /importer:TextureImporter
 /processor:TextureProcessor
