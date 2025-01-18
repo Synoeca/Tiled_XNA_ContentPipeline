@@ -27,8 +27,8 @@ namespace ContentPipelineTest
 
                     if (tileset.Texture?.Mipmaps.Count > 0)
                     {
-                        tileset.TexWidth = tileset.Texture.Mipmaps[0].Width;
-                        tileset.TexHeight = tileset.Texture.Mipmaps[0].Height;
+                        //tileset.TexWidth = tileset.Texture.Mipmaps[0].Width;
+                        //tileset.TexHeight = tileset.Texture.Mipmaps[0].Height;
                         context.Logger.LogMessage($"Texture processed successfully:");
                         context.Logger.LogMessage($" Width: {tileset.TexWidth}");
                         context.Logger.LogMessage($" Height: {tileset.TexHeight}");
