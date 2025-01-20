@@ -19,6 +19,9 @@ namespace PipelineTestExample
         private BasicTiledGroup _basicTiledGroup;
         private BasicTiledMTLG _basicTiledMtlg;
         private BasicTileAndTileset _basicTileAndTileset;
+        private TSXTileset _tileset64;
+        private TSXTileset _tileset4;
+        private TSXTilesetDictionary _tsxTilesetDictionary;
 
         public ExampleGame()
         {
@@ -50,6 +53,12 @@ namespace PipelineTestExample
             //_basicTiledGroup = Content.Load<BasicTiledGroup>("TestMapRev4");
             //_basicTiledMtlg = Content.Load<BasicTiledMTLG>("TestMapRev4");
             _basicTileAndTileset = Content.Load<BasicTileAndTileset>("TestMapRev6");
+            _tileset64 = Content.Load<TSXTileset>("tileset64");
+            _tileset4 = Content.Load<TSXTileset>("tileset4");
+            _tsxTilesetDictionary = new TSXTilesetDictionary();
+            _tsxTilesetDictionary.Tilesets.Add(_tileset64.Name, _tileset64);
+            _tsxTilesetDictionary.Tilesets.Add(_tileset4.Name, _tileset4);
+
         }
 
         protected override void Update(GameTime gameTime)
