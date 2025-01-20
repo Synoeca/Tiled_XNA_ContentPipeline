@@ -54,6 +54,11 @@
 /processorParam:TextureFormat=Color
 /build:tileset.png
 
+#begin tileset4.tsx
+/importer:TSXImporter
+/processor:TSXProcessor
+/build:tileset4.tsx
+
 #begin tileset64.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -65,4 +70,9 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:tileset64.png
+
+#begin tileset64.tsx
+/importer:TSXImporter
+/processor:TSXProcessor
+/build:tileset64.tsx
 

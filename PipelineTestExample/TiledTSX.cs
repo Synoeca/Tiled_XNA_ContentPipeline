@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework;
 
 namespace PipelineTestExample
 {
-    public class BasicTile
+    public class TSXTile
     {
         /// <summary>
         /// The tile's ID within its tileset
@@ -34,7 +34,7 @@ namespace PipelineTestExample
         /// <summary>
         /// Creates a new Tile instance
         /// </summary>
-        public BasicTile()
+        public TSXTile()
         {
             Properties = new Dictionary<string, string>();
         }
@@ -43,7 +43,7 @@ namespace PipelineTestExample
         /// Creates a new Tile instance with the specified ID
         /// </summary>
         /// <param name="id">The tile's ID</param>
-        public BasicTile(int id) : this()
+        public TSXTile(int id) : this()
         {
             Id = id;
         }
@@ -53,7 +53,7 @@ namespace PipelineTestExample
         /// </summary>
         /// <param name="id">The tile's ID</param>
         /// <param name="type">The tile's type</param>
-        public BasicTile(int id, string type) : this(id)
+        public TSXTile(int id, string type) : this(id)
         {
             Type = type;
         }
@@ -64,7 +64,7 @@ namespace PipelineTestExample
         /// <param name="id">The tile's ID</param>
         /// <param name="type">The tile's type</param>
         /// <param name="probability">The tile's probability of being chosen for random placement</param>
-        public BasicTile(int id, string type, float probability) : this(id, type)
+        public TSXTile(int id, string type, float probability) : this(id, type)
         {
             Probability = probability;
         }
@@ -136,7 +136,7 @@ namespace PipelineTestExample
         }
     }
 
-    public class BasicTileAndTileset
+    public class TSXTileset
     {
         /// <summary>
         /// The name of the tileset
@@ -171,7 +171,7 @@ namespace PipelineTestExample
         /// <summary>
         /// Dictionary of all tiles in this tileset, indexed by their local ID (index - FirstTileId)
         /// </summary>
-        public Dictionary<int, BasicTile> Tiles { get; set; }
+        public Dictionary<int, TSXTile> Tiles { get; set; }
 
         /// <summary>
         /// The image source path for the tileset
@@ -196,9 +196,9 @@ namespace PipelineTestExample
         /// <summary>
         /// Initializes a new instance of the Tileset class
         /// </summary>
-        public BasicTileAndTileset()
+        public TSXTileset()
         {
-            Tiles = new Dictionary<int, BasicTile>();
+            Tiles = new Dictionary<int, TSXTile>();
         }
 
         /// <summary>
@@ -206,13 +206,13 @@ namespace PipelineTestExample
         /// </summary>
         /// <param name="index">The global index of the tile</param>
         /// <returns>The tile at the specified index, or null if not found</returns>
-        public BasicTile GetTile(int index)
+        public TSXTile GetTile(int index)
         {
             int localIndex = index - FirstTileId;
             if (localIndex < 0)
                 return null;
 
-            Tiles.TryGetValue(localIndex, out BasicTile result);
+            Tiles.TryGetValue(localIndex, out TSXTile result);
             return result;
         }
 
@@ -224,9 +224,9 @@ namespace PipelineTestExample
             get => Texture;
             set
             {
-                Texture ??= value;
-                //TexWidth = value.Width;
-                //TexHeight = value.Height;
+                Texture = value;
+                TexWidth = value.Width;
+                TexHeight = value.Height;
             }
         }
 
@@ -235,7 +235,7 @@ namespace PipelineTestExample
         /// </summary>
         /// <param name="localId">The local ID of the tile (global ID - FirstTileId)</param>
         /// <param name="tile">The tile to add</param>
-        public void AddTile(int localId, BasicTile tile)
+        public void AddTile(int localId, TSXTile tile)
         {
             Tiles[localId] = tile;
         }
